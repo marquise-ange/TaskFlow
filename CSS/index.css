@@ -101,3 +101,50 @@ body {
     font-size: 1.05rem;
     line-height: 1.7;
 }
+
+
+/* TASK SECTION */
+
+.task-section {
+    padding-bottom: 60px;
+}
+
+.task-card {
+    width: 100%;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-header h2 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.task-subtitle {
+    margin-top: 4px;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.task-status {
+    padding: 5px 10px;
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
