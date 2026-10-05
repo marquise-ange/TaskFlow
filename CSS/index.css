@@ -8,32 +8,35 @@
     --border-color: #e2e8f0;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
     line-height: 1.6;
-    
 }
 
 .container {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
-    padding-left: 5px;
-    padding-right: 5px;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/* HEADER  */
-
+/* HEADER */
 .site-header {
     background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
@@ -41,27 +44,60 @@ body{
 
 .header-content {
     min-height: 72px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
 }
 
 .logo {
     color: var(--secondary-color);
-
     font-size: 1.4rem;
     font-weight: 800;
-
     letter-spacing: -0.5px;
     text-decoration: none;
 }
 
 .header-label {
     color: var(--muted-text);
-
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/* HERO SECTION */
+
+.hero {
+    padding-top: 70px;
+    padding-bottom: 55px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    color: var(--secondary-color);
+    font-size: 2.6rem;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero-text {
+    max-width: 580px;
+    color: var(--muted-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
