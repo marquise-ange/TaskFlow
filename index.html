@@ -3,19 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow - Task Manager</title>
+    <meta  name="description"  content="TaskFlow is a simple and organized task management application for managing daily tasks.">
+    <title>TaskFlow</title>
     <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
 
-<!--Header section-->
+    <!--  HEADER -->
     <header class="site-header">
         <div class="container header-content">
-            <a href="#" class="logo">TaskFlow</a>
-            <p class="header-label">Personal Task Manager</p>
+            <a href="#main-content" class="logo"  aria-label="TaskFlow home">
+                TaskFlow
+            </a>
+            <p class="header-label">
+                Personal Task Manager
+            </p>
         </div>
     </header>
 
-    
-</body>
-</html>
+
+    <!--  MAIN CONTENT -->
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="hero container" aria-labelledby="hero-title" >
+            <div class="hero-content">
+                <p class="eyebrow">
+                    STAY ORGANIZED
+                </p>
+                <h1 id="hero-title">
+                    Get things done,
+                    <span>one task at a time.</span>
+                </h1>
+                <p class="hero-text">
+                    Keep track of your tasks, focus on what matters,
+                    and make steady progress every day.
+                </p>
+            </div>
+        </section>
+
+        <!--TASK SECTION -->
+        <section class="task-section container" aria-labelledby="tasks-heading" >
+            <div class="task-card">
+
+                <!-- TASK HEADER -->
+                <div class="task-header">
+                    <div>
+                        <h2 id="tasks-heading">
+                            My Tasks
+                        </h2>
+                        <p class="task-subtitle">
+                            Manage your daily priorities.
+                        </p>
+                    </div>
+                    <span class="task-status">
+                        TASKS
+                    </span>
+                </div>
+
+
+                <!-- ADD TASK FORM -->
+                <form class="task-form" id="task-form" >
+                    <div class="input-group">
+                        <label for="task-input">
+                            Add a new task
+                        </label>
+                        <input type="text" id="task-input" name="task" placeholder="What needs to be done?" maxlength="100" autocomplete="off" required aria-describedby="form-message" >
+                    </div>
+                    <button type="submit"  class="add-button">
+                        + Add Task
+                    </button>
+                </form>
+
+                <!-- FORM MESSAGE -->
+                <p class="form-message" id="form-message" role="alert" aria-live="polite">
+                </p>
+
+
+                <!-- TASK CONTROLS -->
+                <div class="task-controls">
+                    <div class="filter-buttons" role="group" aria-label="Filter tasks" >
+
+                        <button  type="button"  class="filter-button active"  data-filter="all"  aria-pressed="true" >
+                            All
+                        </button>
+
+                        <button type="button" class="filter-button" data-filter="active" aria-pressed="false" >
+                            Active
+                        </button>
+
+                        <button type="button" class="filter-button" data-filter="completed" aria-pressed="false">
+                            Completed
+                        </button>
+                    </div>
+                </div>
+
+
+              
