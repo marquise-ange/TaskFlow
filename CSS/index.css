@@ -1,29 +1,19 @@
-/* ==============================
-   ROOT VARIABLES
-   ============================== */
+/* ROOT VARIABLES*/
 
 :root {
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
-
     --secondary-color: #0f172a;
-
     --background-color: #f8fafc;
     --surface-color: #ffffff;
-
     --text-color: #1e293b;
     --muted-text: #64748b;
-
     --border-color: #e2e8f0;
-
     --success-color: #16a34a;
     --danger-color: #dc2626;
 }
 
-
-/* ==============================
-   GLOBAL STYLES
-   ============================== */
+/* GLOBAL STYLES  */
 
 * {
     margin: 0;
@@ -37,17 +27,14 @@ html {
 
 body {
     min-height: 100vh;
-
     background-color: var(--background-color);
     color: var(--text-color);
-
     font-family:
         Inter,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
-
     line-height: 1.6;
 }
 
@@ -63,56 +50,43 @@ button {
 .container {
     width: 100%;
     max-width: 1250px;
-
     margin: 0 auto;
-
     padding-left: 15px;
     padding-right: 15px;
 }
 
 
-/* ==============================
-   HEADER
-   ============================== */
+/*  HEADER */
 
 .site-header {
     background-color: var(--surface-color);
-
     border-bottom: 1px solid var(--border-color);
 }
 
 .header-content {
     min-height: 72px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
 }
 
 .logo {
     color: var(--secondary-color);
-
     font-size: 1.4rem;
     font-weight: 800;
-
     letter-spacing: -0.5px;
-
     text-decoration: none;
 }
 
 .header-label {
     color: var(--muted-text);
-
     font-size: 0.85rem;
     font-weight: 500;
 }
 
 
-/* ==============================
-   HERO SECTION
-   ============================== */
+/*  HERO SECTION */
 
 .hero {
     padding-top: 70px;
@@ -125,23 +99,17 @@ button {
 
 .eyebrow {
     color: var(--primary-color);
-
     font-size: 0.8rem;
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     margin-bottom: 14px;
 }
 
 .hero h1 {
     color: var(--secondary-color);
-
     font-size: 2.6rem;
     line-height: 1.15;
-
     letter-spacing: -1.2px;
-
     margin-bottom: 20px;
 }
 
@@ -151,17 +119,13 @@ button {
 
 .hero-text {
     max-width: 580px;
-
     color: var(--muted-text);
-
     font-size: 1.05rem;
     line-height: 1.7;
 }
 
 
-/* ==============================
-   TASK SECTION
-   ============================== */
+/* TASK SECTION */
 
 .task-section {
     padding-bottom: 60px;
@@ -169,91 +133,68 @@ button {
 
 .task-card {
     width: 100%;
-
     background-color: var(--surface-color);
-
     border: 1px solid var(--border-color);
     border-radius: 16px;
-
     padding: 20px;
-
     box-shadow:
         0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 
-/* ==============================
-   TASK HEADER
-   ============================== */
+/* TASK HEADER */
 
 .task-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     padding-bottom: 20px;
     margin-bottom: 24px;
-
     border-bottom: 1px solid var(--border-color);
 }
 
 .task-header h2 {
     color: var(--secondary-color);
-
     font-size: 1.4rem;
     font-weight: 700;
 }
 
 .task-subtitle {
     margin-top: 4px;
-
     color: var(--muted-text);
-
     font-size: 0.9rem;
 }
 
 .task-status {
     padding: 5px 10px;
-
     background-color: #eff6ff;
     color: var(--primary-color);
-
     border-radius: 999px;
-
     font-size: 0.7rem;
     font-weight: 700;
-
     letter-spacing: 0.8px;
 }
 
 
-/* ==============================
-   TASK FORM
-   ============================== */
+/* TASK FORM */
 
 .task-form {
     display: flex;
     align-items: flex-end;
-
     gap: 12px;
-
     margin-top: 24px;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
-
     flex: 1;
-
     gap: 8px;
 }
 
 .input-group label {
     color: var(--secondary-color);
-
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -261,21 +202,14 @@ button {
 .input-group input {
     width: 100%;
     min-width: 0;
-
     height: 48px;
-
     padding: 0 14px;
-
     border: 1px solid var(--border-color);
     border-radius: 8px;
-
     background-color: var(--background-color);
     color: var(--text-color);
-
     outline: none;
-
     font-size: 0.95rem;
-
     transition:
         border-color 0.2s,
         box-shadow 0.2s;
@@ -287,25 +221,19 @@ button {
 
 .input-group input:focus {
     border-color: var(--primary-color);
-
     box-shadow:
         0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .add-button {
     min-height: 48px;
-
     padding: 0 20px;
-
     border: none;
     border-radius: 8px;
-
     background-color: var(--primary-color);
     color: var(--surface-color);
-
     font-size: 0.9rem;
     font-weight: 600;
-
     transition:
         background-color 0.2s,
         transform 0.2s;
@@ -320,15 +248,11 @@ button {
 }
 
 
-/* ==============================
-   FORM MESSAGE
-   ============================== */
+/* FORM MESSAGE */
 
 .form-message {
     min-height: 24px;
-
     margin-top: 8px;
-
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -342,44 +266,33 @@ button {
 }
 
 
-/* ==============================
-   FILTERS
-   ============================== */
+/* FILTERS */
 
 .task-controls {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     margin-top: 16px;
 }
 
 .filter-buttons {
     display: flex;
     align-items: center;
-
     gap: 6px;
-
     padding: 4px;
-
     background-color: var(--background-color);
-
     border: 1px solid var(--border-color);
     border-radius: 10px;
 }
 
 .filter-button {
     padding: 7px 13px;
-
     border: none;
     border-radius: 7px;
-
     background-color: transparent;
     color: var(--muted-text);
-
     font-size: 0.85rem;
     font-weight: 600;
-
     transition: 0.2s ease;
 }
 
@@ -390,39 +303,29 @@ button {
 .filter-button.active {
     background-color: var(--surface-color);
     color: var(--primary-color);
-
     box-shadow:
         0 1px 3px rgba(15, 23, 42, 0.1);
 }
 
 
-/* ==============================
-   LOADING STATE
-   ============================== */
+/*  LOADING STATE */
 
 .loading-state {
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 10px;
-
     padding: 35px 15px;
-
     color: var(--muted-text);
-
     font-size: 0.9rem;
 }
 
 .loading-spinner {
     width: 18px;
     height: 18px;
-
     border: 2px solid var(--border-color);
     border-top-color: var(--primary-color);
-
     border-radius: 50%;
-
     animation: spin 0.8s linear infinite;
 }
 
@@ -432,72 +335,50 @@ button {
     }
 }
 
-/* ==============================
-   ERROR STATE
-   ============================== */
+/* ERROR STATE */
 
 .error-state {
     margin-top: 20px;
-
     padding: 14px 16px;
-
     border: 1px solid #fecaca;
     border-radius: 10px;
-
     background-color: #fef2f2;
-
     color: var(--danger-color);
-
     font-size: 0.85rem;
 }
 
 .error-state strong {
     display: block;
-
     margin-bottom: 3px;
 }
 
 .error-state p {
     color: #b91c1c;
-
     font-size: 0.8rem;
 }
 
-/* ==============================
-   TASK LIST
-   ============================== */
+/* TASK LIST */
 
 .task-list {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
-
     margin-top: 24px;
-
     padding: 0;
-
     list-style: none;
 }
 
 
-/* ==============================
-   INDIVIDUAL TASK
-   ============================== */
+/* INDIVIDUAL TASK*/
 
 .task-item {
     display: flex;
     align-items: center;
-
     gap: 12px;
-
     padding: 14px;
-
     border: 1px solid var(--border-color);
     border-radius: 10px;
-
     background-color: var(--surface-color);
-
     transition:
         border-color 0.2s,
         background-color 0.2s;
@@ -511,50 +392,38 @@ button {
 .task-checkbox {
     width: 18px;
     height: 18px;
-
     flex-shrink: 0;
-
     accent-color: var(--primary-color);
-
     cursor: pointer;
 }
 
 .task-title {
     flex: 1;
-
     color: var(--text-color);
-
     font-size: 0.95rem;
     font-weight: 500;
-
     overflow-wrap: anywhere;
 }
 
 .task-item.completed .task-title {
     color: var(--muted-text);
-
     text-decoration: line-through;
 }
 
 .task-actions {
     display: flex;
     align-items: center;
-
     gap: 6px;
 }
 
 .task-action {
     padding: 6px 9px;
-
     border: 1px solid var(--border-color);
     border-radius: 6px;
-
     background-color: var(--surface-color);
     color: var(--muted-text);
-
     font-size: 0.75rem;
     font-weight: 600;
-
     transition: 0.2s ease;
 }
 
@@ -569,28 +438,21 @@ button {
 }
 
 
-/* ==============================
-   EMPTY STATE
-   ============================== */
+/*  EMPTY STATE */
 
 .empty-state {
     text-align: center;
-
     padding: 45px 20px;
 }
 
 .empty-icon {
     width: 44px;
     height: 44px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0 auto 14px;
-
     border-radius: 50%;
-
     background-color: #eff6ff;
     color: var(--primary-color);
 
@@ -600,39 +462,31 @@ button {
 
 .empty-state h3 {
     color: var(--secondary-color);
-
     font-size: 1rem;
-
     margin-bottom: 5px;
 }
 
 .empty-state p {
     color: var(--muted-text);
-
     font-size: 0.9rem;
 }
 
 
-/* ==============================
-   TASK FOOTER
-   ============================== */
+/* TASK FOOTER */
 
 .task-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
 
     margin-top: 24px;
     padding-top: 18px;
-
     border-top: 1px solid var(--border-color);
 }
 
 .task-footer p {
     color: var(--muted-text);
-
     font-size: 0.8rem;
 }
 
@@ -674,12 +528,9 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-/* ==============================
-   RESPONSIVE DESIGN
-   ============================== */
+/*  RESPONSIVE DESIGN */
 
 @media (max-width: 600px) {
-
     .container {
         padding-left: 15px;
         padding-right: 15px;
@@ -775,13 +626,11 @@ a:focus-visible {
 
     .filter-button {
         padding: 7px 8px;
-
         font-size: 0.78rem;
     }
 
     .task-item {
         padding: 12px;
-
         gap: 9px;
     }
 
@@ -791,7 +640,6 @@ a:focus-visible {
 
     .task-action {
         padding: 6px 8px;
-
         font-size: 0.7rem;
     }
 

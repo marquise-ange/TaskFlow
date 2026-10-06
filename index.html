@@ -101,3 +101,63 @@
 
 
               
+                  <!--  LOADING STATE -->
+
+                <div class="loading-state" id="loading-state" aria-live="polite" hidden>
+                    <div class="loading-spinner" aria-hidden="true"></div>
+                    <p>
+                        Loading tasks...
+                    </p>
+                </div>
+
+                <!--  ERROR STATE  -->
+                <div class="error-state" id="error-state" role="alert" aria-live="assertive" hidden>
+                    <strong> Something went wrong. </strong>
+                    <p id="error-message">
+                        We couldn't load your tasks. Please try again.
+                    </p>
+                </div>
+
+                <!--  TASK LIST-->
+
+                <ul class="task-list" id="task-list" aria-label="Task list">
+                </ul>
+
+                <!-- EMPTY STATE -->
+
+                <div class="empty-state" id="empty-state" hidden>
+
+                    <div class="empty-icon" aria-hidden="true">
+                        ✓
+                    </div>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task and start making progress. </p>
+
+                </div>
+
+                <!--  TASK FOOTER -->
+                <div class="task-footer">
+                    <p id="task-counter" aria-live="polite" >
+                        0 tasks left
+                    </p>
+                    <p class="task-footer-text">
+                        Stay focused and keep moving forward.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                TaskFlow &copy; 2026.
+            </p>
+        </div>
+    </footer>
+    <!--linking JS-->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
