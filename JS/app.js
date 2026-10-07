@@ -20,6 +20,7 @@ let currentFilter = "all";
 
 // DOM ELEMENTS
 
+const themeButton = document.querySelector("#theme-button");
 const taskForm = document.querySelector("#task-form");
 const taskInput = document.querySelector("#task-input");
 const taskList = document.querySelector("#task-list");
@@ -30,6 +31,7 @@ const errorState = document.querySelector("#error-state");
 const errorMessage = document.querySelector("#error-message");
 const filterButtons = document.querySelectorAll(".filter-button");
 const loadingState = document.getElementById("loading-state");
+
 
 
 // LOAD TASKS FROM FIRESTORE
@@ -459,6 +461,51 @@ function clearFormMessage() {
     formMessage.className = "form-message";
 }
 
+
+// DARK THEME
+function updateThemeButton() {
+
+    if (document.body.classList.contains("dark-theme")) {
+
+        themeButton.textContent = "Light Mode";
+        themeButton.setAttribute(
+            "aria-label",
+            "Switch to light theme"
+        );
+
+    } else {
+
+        themeButton.textContent = "Dark Mode";
+        themeButton.setAttribute(
+            "aria-label",
+            "Switch to dark theme"
+        );
+    }
+}
+
+
+themeButton.addEventListener("click", function() {
+
+    // Toggle dark theme
+    document.body.classList.toggle("dark-theme");
+
+    // Save theme preference
+    if (document.body.classList.contains("dark-theme")) {
+
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        localStorage.setItem("theme", "light");
+    }
+
+    // Update button
+    updateThemeButton();
+
+});
+
+
+
 // ADD TASK FORM EVENT
 taskForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -545,6 +592,16 @@ filterButtons.forEach(function(button) {
 });
 
 // INITIALIZE APPLICATION
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+}
+
+// Update theme button
+updateThemeButton();
 
 // Hide error state initially
 errorState.hidden = true;

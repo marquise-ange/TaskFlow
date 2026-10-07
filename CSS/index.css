@@ -17,7 +17,9 @@
     --transition: 0.2s ease;
 }
 
-    
+
+/* GLOBAL STYLES */
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +30,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -46,6 +49,7 @@ input {
 button {
     cursor: pointer;
 }
+
 
 button:disabled {
     cursor: not-allowed;
@@ -76,13 +80,18 @@ button:disabled {
 }
 
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .logo {
     color: var(--secondary-color);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-
     transition: color var(--transition);
 }
 
@@ -95,10 +104,33 @@ button:disabled {
 .header-label {
     color: var(--muted-text);
     font-size: 0.9rem;
+    
 }
 
 
-/* HERO */
+/* THEME BUTTON */
+
+.theme-button {
+    padding: 8px 14px;
+    color: var(--text-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+
+.theme-button:hover {
+    background-color: var(--background-color);
+}
+
+
+/* HERO SECTION */
 
 .hero {
     padding-top: 70px;
@@ -244,7 +276,7 @@ button:disabled {
 }
 
 
-/* ADD BUTTON */
+/* ADD TASK BUTTON */
 
 .add-button {
     padding: 13px 20px;
@@ -289,7 +321,7 @@ button:disabled {
 }
 
 
-/* TASK CONTROLS */
+/* TASK FILTERS */
 
 .task-controls {
     padding: 20px 30px;
@@ -338,7 +370,7 @@ button:disabled {
 }
 
 
-/*   LOADING AND ERROR STATE */
+/* LOADING AND ERROR STATES */
 
 .error-state {
     margin: 20px 30px;
@@ -360,11 +392,17 @@ button:disabled {
     font-size: 0.9rem;
 }
 
-.loading-state{
-    margin:20px 30px;
-    padding:16px;
-    background-color:  white;
+
+.loading-state {
+    margin: 20px 30px;
+    padding: 16px;
+    color: var(--muted-text);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    text-align: center;
 }
+
 
 /* TASK LIST */
 
@@ -379,17 +417,18 @@ button:disabled {
     display: flex;
     align-items: center;
     gap: 14px;
+    background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
     transition: background-color var(--transition);
 }
 
 
 .task-item:hover {
-    background-color: #f8fafc;
+    background-color: var(--background-color);
 }
 
 
-/* CHECKBOX*/
+/* TASK CHECKBOX */
 
 .task-checkbox {
     width: 19px;
@@ -427,6 +466,7 @@ button:disabled {
 
 .task-action {
     padding: 7px 11px;
+    color: var(--text-color);
     background-color: transparent;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -503,7 +543,7 @@ button:disabled {
 }
 
 
-/*  TASK FOOTER */
+/* TASK FOOTER */
 
 .task-footer {
     padding: 20px 30px;
@@ -542,6 +582,222 @@ button:disabled {
 
 .site-footer p {
     font-size: 0.85rem;
+}
+
+
+/* DARK THEME */
+
+body.dark-theme {
+    --background-color: #0f172a;
+    --surface-color: #1e293b;
+    --secondary-color: #f8fafc;
+    --text-color: #f8fafc;
+    --muted-text: #cbd5e1;
+    --border-color: #334155;
+}
+
+
+/* DARK THEME - PAGE */
+
+body.dark-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* DARK THEME - HEADER */
+
+body.dark-theme .site-header {
+    background-color: #020617;
+    border-color: #334155;
+}
+
+
+body.dark-theme .logo {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .header-label {
+    color: #cbd5e1;
+}
+
+
+/* DARK THEME - HERO */
+
+body.dark-theme .hero h1 {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .hero-text {
+    color: #cbd5e1;
+}
+
+
+/* DARK THEME - TASK CARD */
+
+body.dark-theme .task-card {
+    background-color: var(--surface-color);
+    border-color: #334155;
+}
+
+
+body.dark-theme .task-header {
+    border-color: #334155;
+}
+
+
+body.dark-theme .task-header h2 {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .task-subtitle {
+    color: #cbd5e1;
+}
+
+
+/* DARK THEME - TASK FORM */
+
+body.dark-theme .task-form {
+    border-color: #334155;
+}
+
+
+body.dark-theme .input-group label {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .input-group input {
+    color: #f8fafc;
+    background-color: #0f172a;
+    border-color: #475569;
+}
+
+
+body.dark-theme .input-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* DARK THEME - FILTERS */
+
+body.dark-theme .task-controls {
+    border-color: #334155;
+}
+
+
+body.dark-theme .filter-button {
+    color: #cbd5e1;
+}
+
+
+body.dark-theme .filter-button:hover,
+body.dark-theme .filter-button.active {
+    color: #60a5fa;
+    background-color: #1e3a5f;
+    border-color: #3b82f6;
+}
+
+
+/* DARK THEME - LOADING STATE */
+
+body.dark-theme .loading-state {
+    color: #cbd5e1;
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+
+/* DARK THEME - TASK ITEMS */
+
+body.dark-theme .task-item {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+
+body.dark-theme .task-item:hover {
+    background-color: #1e293b;
+}
+
+
+body.dark-theme .task-title {
+    color: #f8fafc;
+}
+
+
+/* DARK THEME - TASK ACTIONS */
+
+body.dark-theme .task-action {
+    border-color: #475569;
+}
+
+
+body.dark-theme .task-action.edit:hover {
+    background-color: #1e3a5f;
+    border-color: #3b82f6;
+}
+
+
+body.dark-theme .task-action.delete:hover {
+    background-color: #450a0a;
+    border-color: #7f1d1d;
+}
+
+
+/* DARK THEME - EMPTY STATE */
+
+body.dark-theme .empty-state h3 {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .empty-state p {
+    color: #cbd5e1;
+}
+
+
+/* DARK THEME - TASK FOOTER */
+
+body.dark-theme .task-footer {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+
+body.dark-theme #task-counter {
+    color: #f8fafc;
+}
+
+
+body.dark-theme .task-footer-text {
+    color: #cbd5e1;
+}
+
+
+/* DARK THEME - THEME BUTTON */
+
+body.dark-theme .theme-button {
+    color: #f8fafc;
+    background-color: #1e293b;
+    border-color: #475569;
+}
+
+
+body.dark-theme .theme-button:hover {
+    background-color: #334155;
+}
+
+
+/* DARK THEME - SITE FOOTER */
+
+body.dark-theme .site-footer {
+    color: #cbd5e1;
+    background-color: #020617;
+    border-color: #334155;
 }
 
 
@@ -598,7 +854,6 @@ button:disabled {
 
     .task-header {
         padding: 22px 20px;
-
         align-items: flex-start;
     }
 
