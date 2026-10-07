@@ -14,7 +14,7 @@ import {
 // FIREBASE CONFIGURATION
 
 const firebaseConfig = {
-    apiKey: "REMOVED_API_KEY",
+
     authDomain: "taskflow-590c0.firebaseapp.com",
     projectId: "taskflow-590c0",
     storageBucket: "taskflow-590c0.firebasestorage.app",
