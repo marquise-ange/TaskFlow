@@ -13,15 +13,6 @@ import {
 
 // FIREBASE CONFIGURATION
 
-const firebaseConfig = {
-
-    authDomain: "taskflow-590c0.firebaseapp.com",
-    projectId: "taskflow-590c0",
-    storageBucket: "taskflow-590c0.firebasestorage.app",
-    messagingSenderId: "488787893008",
-    appId: "1:488787893008:web:742e9d088efb4f68916395"
-};
-
 
 
 // INITIALIZE FIREBASE
