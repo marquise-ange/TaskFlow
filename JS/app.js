@@ -1,4 +1,3 @@
-
 // FIREBASE CONNECTION
 import { db } from "../firebase.js";
 
@@ -30,10 +29,15 @@ const emptyState = document.querySelector("#empty-state");
 const errorState = document.querySelector("#error-state");
 const errorMessage = document.querySelector("#error-message");
 const filterButtons = document.querySelectorAll(".filter-button");
+const loadingState = document.getElementById("loading-state");
 
 
 // LOAD TASKS FROM FIRESTORE
 async function loadTasks() {
+
+    // Show loading state
+    loadingState.hidden = false;
+
     try {
 
         // Hide previous error
@@ -72,6 +76,11 @@ async function loadTasks() {
             "We couldn't load your tasks. Please try again.";
 
         errorState.hidden = false;
+
+    } finally {
+
+        // Hide loading state
+        loadingState.hidden = true;
     }
 }
 
@@ -332,6 +341,7 @@ async function editTask(taskId) {
     }
 
     const trimmedTitle = newTitle.trim();
+
     // Validate empty title
     if (trimmedTitle === "") {
         showFormMessage(
@@ -428,6 +438,7 @@ function updateTaskCounter() {
 
 
     const count = activeTasks.length;
+
     if (count === 1) {
         taskCounter.textContent = "1 task left";
     } else {
@@ -458,6 +469,7 @@ taskForm.addEventListener("submit", function(event) {
 // TASK BUTTON EVENTS
 taskList.addEventListener("click", function(event) {
     const taskItem = event.target.closest(".task-item");
+
     if (!taskItem) {
         return;
     }
@@ -486,6 +498,7 @@ taskList.addEventListener("change", function(event) {
     }
 
     const taskItem = event.target.closest(".task-item");
+
     if (!taskItem) {
         return;
     }

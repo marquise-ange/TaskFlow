@@ -58,20 +58,14 @@ Firebase Security Rules are used to validate the structure and type of task data
 ##  Project Structure
 
 
-TaskFlow/
-│
-├── CSS/
-│   └── index.css
-│
-├── JS/
-│   └── app.js
-│
-├── firebase.js
-├── index.html
-└── README.md
+TaskFlow->CSS/index.css
+        ->JS/app.js
+        ->index.html
+        ->firebase.js
+        ->README.md
 
 
-## 💻 How to Run Locally
+##  How to Run Locally
 
 1. Clone the repository:
 
